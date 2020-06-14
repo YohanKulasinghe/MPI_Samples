@@ -5,7 +5,7 @@ int main(int argc, char** argv) {
 	//Initialize MPI Environemt 
 	MPI_Init(NULL, NULL);
 
-	//Get the number og processes
+    //Get the number og processes
 	int world_size;
 	MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 	MPI_Get_processor_name(processor_name, &name_len);
 
 	//Print off hello world message
-	printf("Hello World from processor %s, rank %d out of %d processors\n", processor_name, world_rank, world_size);
+	printf("Hello World from processor %s, rank %d out of %d processors\n", processor_name, world_rank,world_size);
 
 	//Finnalize the MPI Environment
 	MPI_Finalize();
